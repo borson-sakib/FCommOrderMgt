@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar ul li a img {
+            margin-right: 10px;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .dashboard-header h1 {
+            font-size: 24px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .stats .stat {
+            flex: 1;
+            background-color: #f8f8f8;
+            padding: 20px;
+            margin: 0 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .stats .stat:first-child {
+            margin-left: 0;
+        }
+        .stats .stat:last-child {
+            margin-right: 0;
+        }
+        .chart {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>SaaS</h2>
+        <ul>
+            <li><a href="{% url 'userEnd' %}"><img src="dashboard-icon.png" alt="Dashboard Icon"> User </a></li>
+            <li><a href="#"><img src="order-icon.png" alt="Order Icon"> Order</a></li>
+            <li><a href="#"><img src="inventory-icon.png" alt="Inventory Icon"> Inventory</a></li>
+            <li><a href="#"><img src="customer-icon.png" alt="Customer Icon"> Customer</a></li>
+            <li><a href="#"><img src="delivery-icon.png" alt="Delivery Icon"> Delivery</a></li>
+            <li><a href="#"><img src="analytics-icon.png" alt="Analytics Icon"> Analytics</a></li>
+            <li><a href="#"><img src="report-icon.png" alt="Report Icon"> Report</a></li>
+            <li><a href="#"><img src="support-icon.png" alt="Support Icon"> Support</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="dashboard-header">
+            <h1>Dashboard Overview</h1>
+            <div class="notification">
+                <img src="notification-icon.png" alt="Notification Icon">
+            </div>
+        </div>
+        <div class="stats">
+            <div class="stat">
+                <h3>Total Sales</h3>
+                <p>₹20,04,563</p>
+            </div>
+            <div class="stat">
+                <h3>Total Orders</h3>
+                <p>56709</p>
+            </div>
+            <div class="stat">
+                <h3>Active Orders</h3>
+                <p>25789</p>
+            </div>
+            <div class="stat">
+                <h3>Complete Orders</h3>
+                <p>20636</p>
+            </div>
+            <div class="stat">
+                <h3>Cancelled Orders</h3>
+                <p>10376</p>
+            </div>
+        </div>
+        <div class="chart">
+            <h2>Sales Chart (30 days)</h2>
+            <img src="sales-chart.png" alt="Sales Chart">
+        </div>
+    </div>
+</body>
+</html>
