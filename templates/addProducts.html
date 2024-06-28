@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            background-color: rgb(66, 46, 138);
+            color: white;
+        }
+        .header img {
+            width: 80px;
+            margin-right: 10px;
+        }
+        .header h1 {
+            margin: 15px;
+        }
+        .header p {
+            color: gray;
+            margin: 5px 0 20px;
+        }
+        .offers {
+            background-color: #ffe6e6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .offers p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .offers p span {
+            color: red;
+            font-weight: bold;
+        }
+        .see-all-items {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #ff4d4d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .category {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .category .item {
+            width: 48%;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .category .item img {
+            width: 100%;
+        }
+        .category .item p {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .add-product-section {
+            margin-top: 40px;
+            width: 60%;
+            border: 2px solid black;
+        }
+        .add-product-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .add-product-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .add-product-form label {
+            width: 83%;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .add-product-form input,
+        .add-product-form textarea,
+        .add-product-form select {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .add-product-form button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+
+        }
+        .add-product-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- <img src="logo.png" alt="Chillox"> -->
+            <h1>{{shop.shop_name}}</h1>
+        </div>
+        
+        <div class="add-product-section">
+            <h2>Add New Product</h2>
+            <form class="add-product-form" action="{% url 'addProduct' shop.shop_id_public %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <label for="product-name">Product Name</label>
+                <input type="text" id="product-name" name="product_name" required>
+                
+                <label for="product-category">Category</label>
+                <select id="product-category" name="product_category" required>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Cosmetics">Cosmetics</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Food">Food</option>
+                </select>
+                
+                <label for="product-price">Price</label>
+                <input type="number" id="product-price" name="product_price" required>
+                
+                <label for="product-description">Description</label>
+                <textarea id="product-description" name="product_description" rows="4" required></textarea>
+                
+                <label for="product-image">Product Image</label>
+                <input type="file" id="product-image" name="product_image" accept="image/*" required>
+                
+                <button type="submit">Add Product</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -14,8 +14,14 @@ urlpatterns = [
     path('', dashboard, name="dashboard"),
     path('createShop', createShop, name="createShop"),
     path('userEnd', userEnd, name="userEnd"),
+    path('shops', shops, name="shops"),
+    path('shopViewTest', shopViewTest, name="shopViewTest"),
+    path('shopView/<str:shop_id_public>', shopView, name="shopView"),
+    path('load_shop_details', load_shop_details, name="load_shop_details"),
     
-   
+   #Products
+    path('addProduct/<str:shop_id_public>', addProduct, name="addProduct"),
+
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

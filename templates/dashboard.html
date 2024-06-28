@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+
     <title>Dashboard Overview</title>
     <style>
         body {
@@ -80,9 +82,12 @@
     <div class="sidebar">
         <h2>SaaS</h2>
         <ul>
-            <li><a href="{% url 'userEnd' %}"><img src="dashboard-icon.png" alt="Dashboard Icon"> User </a></li>
-            <li><a href="#"><img src="order-icon.png" alt="Order Icon"> Order</a></li>
-            <li><a href="#"><img src="inventory-icon.png" alt="Inventory Icon"> Inventory</a></li>
+            <li><a href="{% url 'dashboard' %}"><span><i class="icon icon-home"></i></span>HOME</a></li>
+
+            <li><a href="{% url 'userEnd' %}"><span><i class="icon icon-user"></i></span> USER</a></li>
+
+            <li><a href="{% url 'shops' %}"> <span><i class="icon icon-emotsmile"></i></span> Shops</a></li>
+            <li><a href="{% url 'shopViewTest' %}"> <span><i class="icon icon-emotsmile"></i></span> Shop View</a></li>
             <li><a href="#"><img src="customer-icon.png" alt="Customer Icon"> Customer</a></li>
             <li><a href="#"><img src="delivery-icon.png" alt="Delivery Icon"> Delivery</a></li>
             <li><a href="#"><img src="analytics-icon.png" alt="Analytics Icon"> Analytics</a></li>
@@ -90,39 +95,10 @@
             <li><a href="#"><img src="support-icon.png" alt="Support Icon"> Support</a></li>
         </ul>
     </div>
-    <div class="content">
-        <div class="dashboard-header">
-            <h1>Dashboard Overview</h1>
-            <div class="notification">
-                <img src="notification-icon.png" alt="Notification Icon">
-            </div>
-        </div>
-        <div class="stats">
-            <div class="stat">
-                <h3>Total Sales</h3>
-                <p>₹20,04,563</p>
-            </div>
-            <div class="stat">
-                <h3>Total Orders</h3>
-                <p>56709</p>
-            </div>
-            <div class="stat">
-                <h3>Active Orders</h3>
-                <p>25789</p>
-            </div>
-            <div class="stat">
-                <h3>Complete Orders</h3>
-                <p>20636</p>
-            </div>
-            <div class="stat">
-                <h3>Cancelled Orders</h3>
-                <p>10376</p>
-            </div>
-        </div>
-        <div class="chart">
-            <h2>Sales Chart (30 days)</h2>
-            <img src="sales-chart.png" alt="Sales Chart">
-        </div>
-    </div>
+    
+
+        {% block content %}
+
+        {% endblock content %}
 </body>
 </html>

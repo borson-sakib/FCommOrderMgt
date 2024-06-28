@@ -1,0 +1,50 @@
+{% extends 'dashboard.html' %}  
+  
+{% block content %}  
+
+   <div class="content">
+        <div class="dashboard-header">
+            <h1>Dashboard Overview</h1>
+            <div class="notification">
+                <span><i class="icon icon-envelope-letter"></i></span>
+                
+                
+            </div>
+        </div>
+        <div class="dashboard-header">
+            <span><small>{{location}}</small></span>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <h3>Total Shops</h3>
+                <h1>{{shop_count}}</h1>
+            </div>
+            <div class="stat">
+                <h3>Total Orders</h3>
+                <p>56709</p>
+            </div>
+            <div class="stat">
+                <h3>Active Orders</h3>
+                <p>25789</p>
+            </div>
+            <div class="stat">
+                <h3>Complete Orders</h3>
+                <p>20636</p>
+            </div>
+            <div class="stat">
+                <h3>Cancelled Orders</h3>
+                <p>10376</p>
+            </div>
+        </div>
+        <div class="chart">
+            <h2>Sales Chart (30 days)</h2>
+            <img src="sales-chart.png" alt="Sales Chart">
+        </div>
+    </div>
+
+
+
+
+
+{% endblock content %}  

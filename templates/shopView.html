@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop View</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: left;
+        }
+        .header img,
+        .header h1 {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .header img {
+            width: 80px;
+            margin-right: 10px;
+        }
+        .header h1 {
+            margin: 10px 0 0;
+        }
+        .header p {
+            color: gray;
+            margin: 5px 0 20px;
+        }
+        .offers {
+            background-color: #ffe6e6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .offers p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .offers p span {
+            color: red;
+            font-weight: bold;
+        }
+        .see-all-items {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #ff4d4d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .category {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .category .item {
+            width: 48%;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .category .item img {
+            width: 100%;
+        }
+        .category .item p {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .category .item {
+                width: 100%;
+            }
+        }
+
+        
+
+.height{
+    
+    height:5%;
+}
+
+.card{
+    
+    width:350px;
+    height:370px;
+}
+
+.image{
+    position:absolute;
+    right:12px;
+    top:10px;
+}
+
+.main-heading{
+    
+    font-size:40px;
+    color:red !important;
+}
+
+.ratings i{
+    
+    color:orange;
+    
+}
+
+.user-ratings h6{
+    margin-top:2px;
+}
+
+.colors{
+    display:flex;
+    margin-top:2px;
+}
+
+.colors span{
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    cursor:pointer;
+    display:flex;
+    margin-right:6px;
+}
+
+.colors span:nth-child(1) {
+    
+    background-color:red;
+    
+}
+
+.colors span:nth-child(2) {
+    
+    background-color:blue;
+    
+}
+
+.colors span:nth-child(3) {
+    
+    background-color:yellow;
+    
+}
+
+.colors span:nth-child(4) {
+    
+    background-color:purple;
+    
+}
+
+.btn-danger{
+    
+    height:48px;
+    font-size:18px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- <img src="logo.png" alt="Chillox"> -->
+            <img src="https://www.pngitem.com/pimgs/m/485-4852378_sample-logo-png-transparent-png.png">
+            <h1>{{shop.shop_name}}</h1>
+            <!-- <p>@{{shop.shop_id_public}}</p> -->
+        </div>
+        <!-- <div class="offers">
+            <p>Delivery Charge Free! <span>Minimum Order 450 Taka</span></p>
+            <p>Delivery charge 60Tk For all branches</p>
+            <p>60 Taka Off!! <span>Minimum order 560 Taka</span></p>
+            <p>130 Taka OFF!! <span>Minimum order 999 Taka</span></p>
+            <p>220 Taka OFF!! <span>Minimum Order 1499 Taka</span></p>
+        </div> -->
+        <a href="#" class="see-all-items">See all items</a>
+        <h2>Select Category</h2>
+        <div class="category">
+            <div class="item">
+                <div class="height d-flex justify-content-center align-items-center">
+    
+                    <div class="card p-3">
+                        
+                        <div class="d-flex justify-content-between align-items-center ">
+                            <div class="mt-2">
+                                <h4 class="text-uppercase">Ikea</h4>
+                                <div class="mt-5">
+                                    <h5 class="text-uppercase mb-0">Blanda Matt</h5>
+                                    <h1 class="main-heading mt-0">VASE</h1>
+                                    <div class="d-flex flex-row user-ratings">
+                                        <div class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        </div>
+                                        <h6 class="text-muted ml-1">4/5</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="image">
+                                <img src="https://i.imgur.com/MGorDUi.png" width="20">
+                            </div> -->
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-2 mb-2">
+                            <span>Available colors</span>
+                            <div class="colors">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            
+                        </div>
+                        
+                        
+                        <p>A great option weather you are at office or at home. </p>
+                        
+                        <button class="btn btn-danger">Add to cart</button>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="item">
+                <img src="combo_offer.jpg" alt="Combo Offer">
+                <p>CHILL EXPRESS COMBO OFFER</p>
+            </div>
+            <div class="item">
+                <img src="beef_burgers.jpg" alt="Beef Burgers">
+                <p>Beef Burgers</p>
+            </div>
+            <div class="item">
+                <img src="chicken_burgers.jpg" alt="Chicken Burgers">
+                <p>Chicken Burgers</p>
+            </div>
+            <div class="item">
+                <img src="pankha_wings.jpg" alt="Pankha Wings">
+                <p>Pankha Wings</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
