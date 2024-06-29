@@ -43,6 +43,7 @@
                 <th>Contact Phone</th>
                 <th>Landing Page</th>
                 <th>Created At</th>
+                <th>Action</th>
                 <!-- <th>Updated At</th> -->
             </tr>
         </thead>
@@ -57,6 +58,7 @@
                     <td>{{ shop.contact_phone }}</td>
                     <td><a href="{% url 'addProduct' shop.shop_id_public %}">View</a></td>
                     <td>{{ shop.created_at }}</td>
+                    <td><a href="{% url 'userProfile' shop.shop_id_public %}" style="text-decoration: none;"><span><i class="icon icon-settings"></i></span></a></td>
                     <!-- <td>{{ shop.updated_at }}</td> -->
                 </tr>
             {% endfor %}

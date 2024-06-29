@@ -1,0 +1,83 @@
+{% extends 'dashboard.html' %}  
+  
+{% block content %} 
+<div class="content">
+    <div class="dashboard-header">
+        {% if shop.shop_logo %}
+        <div style="display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 120px; height: 100px;padding:3px;">
+    <img src="/media/{{shop.shop_logo}}" alt="Shop Logo" style="max-width: 100%; max-height: 100%;">
+</div>
+
+            {% else %}
+            <img class="rounded-circle" width="80px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+
+        {% endif %}
+            <h1>User Management</h1>
+
+            <div class="notification">
+                <span><i class="icon icon-envelope-letter"></i></span>
+            </div>
+        </div>
+    <div class="dashboard-header">
+            <div class="col-md-12" style="background-color: #ff6600; color:white; border-radius:5px ;padding:5px;">
+            <div class="d-flex flex-column align-items-left text-left">
+                <h3>{{shop.shop_name}}</h3>
+             <span class="text-grey-200">@{{shop.shop_id_public}}</span>
+                <span> </span>
+            </div>
+        </div>
+           
+        </div>
+
+        <div class="stats">
+<div class="container rounded bg-white">
+    <div class="row">
+        
+        <div class="col-md-5 border-right">
+            <div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Personal Information</h4>
+                </div>
+                <form action="" method="post">
+                    <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
+                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value=""></div>
+                    <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value=""></div>
+                </div>
+                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Update Profile</button></div>
+                </form>
+
+                
+               
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-12" style="border: 1px solid #ff6600; padding: 10px;margin-top: 20px;">
+                <form class="add-product-form" action="{% url 'updateShopLogo' shop.shop_id_public %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                
+                <label for="shop_logo"> <strong>Upload Logo Image</strong> </label>
+                <br>
+                <br>
+                <input type="file" id="shop_logo" name="shop_logo" accept="image/*" required>
+                
+                <button class="btn btn-primary profile-button" type="submit">Update Logo</button>
+            </form>
+                </div>
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center experience"><span>Edit Experience</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Experience</span></div><br>
+                <div class="col-md-12"><label class="labels">Experience in Designing</label><input type="text" class="form-control" placeholder="experience" value=""></div> <br>
+                <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" value=""></div>
+            </div>
+        </div>
+    </div>
+        </div>
+</div>
+
+
+
+
+{% endblock content %}  

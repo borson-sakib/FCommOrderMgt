@@ -77,21 +77,46 @@
             justify-content: space-between;
         }
         .category .item {
-            width: 48%;
+            width: 20%;
+            margin: 1px;
             margin-bottom: 20px;
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
             overflow: hidden;
             text-align: center;
+        }.category .item:hover {
+            background-color: #958f8d6e; /* Change background color on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
         }
         .category .item img {
-            width: 100%;
+            width: 70%;
         }
         .category .item p {
             margin: 10px 0;
             font-weight: bold;
         }
+        .order-button {
+            background-color: #ff6600; /* Button background color */
+            border: none; /* Remove default border */
+            color: white; /* Text color */
+            padding: 2px 5px; /* Padding inside the button */
+            text-align: center; /* Center the text */
+            text-decoration: none; /* Remove underline from text */
+            display: inline-block; /* Make the element inline-block */
+            font-size: 16px; /* Font size */
+            font-weight: bold; /* Bold font */
+            margin: 10px 0; /* Margin around the button */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for background color and shadow */
+        }
+
+        .order-button:hover {
+            background-color: #ff4500; /* Change background color on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+        }
+
         @media (max-width: 768px) {
             .category .item {
                 width: 100%;
@@ -99,83 +124,6 @@
         }
 
         
-
-.height{
-    
-    height:5%;
-}
-
-.card{
-    
-    width:350px;
-    height:370px;
-}
-
-.image{
-    position:absolute;
-    right:12px;
-    top:10px;
-}
-
-.main-heading{
-    
-    font-size:40px;
-    color:red !important;
-}
-
-.ratings i{
-    
-    color:orange;
-    
-}
-
-.user-ratings h6{
-    margin-top:2px;
-}
-
-.colors{
-    display:flex;
-    margin-top:2px;
-}
-
-.colors span{
-    width:15px;
-    height:15px;
-    border-radius:50%;
-    cursor:pointer;
-    display:flex;
-    margin-right:6px;
-}
-
-.colors span:nth-child(1) {
-    
-    background-color:red;
-    
-}
-
-.colors span:nth-child(2) {
-    
-    background-color:blue;
-    
-}
-
-.colors span:nth-child(3) {
-    
-    background-color:yellow;
-    
-}
-
-.colors span:nth-child(4) {
-    
-    background-color:purple;
-    
-}
-
-.btn-danger{
-    
-    height:48px;
-    font-size:18px;
-}
     </style>
 </head>
 <body>
@@ -196,54 +144,20 @@
         <a href="#" class="see-all-items">See all items</a>
         <h2>Select Category</h2>
         <div class="category">
+            
+            {% for product in products %}
+
             <div class="item">
-                <div class="height d-flex justify-content-center align-items-center">
-    
-                    <div class="card p-3">
-                        
-                        <div class="d-flex justify-content-between align-items-center ">
-                            <div class="mt-2">
-                                <h4 class="text-uppercase">Ikea</h4>
-                                <div class="mt-5">
-                                    <h5 class="text-uppercase mb-0">Blanda Matt</h5>
-                                    <h1 class="main-heading mt-0">VASE</h1>
-                                    <div class="d-flex flex-row user-ratings">
-                                        <div class="ratings">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        </div>
-                                        <h6 class="text-muted ml-1">4/5</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="image">
-                                <img src="https://i.imgur.com/MGorDUi.png" width="20">
-                            </div> -->
-                        </div>
-                        
-                        <div class="d-flex justify-content-between align-items-center mt-2 mb-2">
-                            <span>Available colors</span>
-                            <div class="colors">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            
-                        </div>
-                        
-                        
-                        <p>A great option weather you are at office or at home. </p>
-                        
-                        <button class="btn btn-danger">Add to cart</button>
-                    </div>
-    
-                </div>
+                <img src="/media/{{product.image}}" alt="{{product.name}}">
+                <p>{{product.name}}</p>
+                <span><small>{{product.price}}</small></span><br>
+                <span><button class="order-button">Order</button></span>
+                
             </div>
-            <div class="item">
-                <img src="combo_offer.jpg" alt="Combo Offer">
+
+            {% endfor %}
+            <!-- <div class="item">
+                <img src="/media/products/IMG_5207.PNG" alt="Combo Offer">
                 <p>CHILL EXPRESS COMBO OFFER</p>
             </div>
             <div class="item">
@@ -257,7 +171,7 @@
             <div class="item">
                 <img src="pankha_wings.jpg" alt="Pankha Wings">
                 <p>Pankha Wings</p>
-            </div>
+            </div> -->
         </div>
     </div>
 </body>

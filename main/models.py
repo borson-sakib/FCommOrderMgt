@@ -52,6 +52,7 @@ class Shop(models.Model):
     owner_name = models.CharField(max_length=255)
     contact_email = models.EmailField()
     contact_phone = models.CharField(max_length=15)
+    shop_logo = models.ImageField(upload_to='shop_resources/logo/',null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -69,6 +70,7 @@ class Product(models.Model):
     shop = models.ForeignKey(Shop, on_delete=models.CASCADE)
     shopid = models.CharField(max_length=255)
     name = models.CharField(max_length=255)
+    category = models.CharField(max_length=255,null=True)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
     stock = models.PositiveIntegerField(null=True)
@@ -82,6 +84,14 @@ class Product(models.Model):
         if not self.product_id:
             self.product_id = generate_product_id()
         super().save(*args, **kwargs)
+        
+    @staticmethod
+    def get_next_serial_number(shop_id, category):
+        latest_product = Product.objects.filter(shopid=shop_id, category=category).order_by('-serial_no').first()
+        if latest_product and latest_product.image:
+            serial_number = int(latest_product.image.name.split('-')[-1].split('.')[0])
+            return serial_number + 1
+        return 1
         
 def generate_product_id():
         return uuid.uuid4().hex[:4] + '-' + uuid.uuid4().hex[:4] + '-' + uuid.uuid4().hex[:4]

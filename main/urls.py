@@ -10,6 +10,11 @@ from django.conf.urls.static import static
 from django.contrib.auth.middleware import AuthenticationMiddleware
 
 urlpatterns = [
+    
+    #User
+    path('userProfile/<str:shop_id_public>', userProfile, name="userProfile"),
+    path('updateShopLogo/<str:shop_id_public>', updateShopLogo, name="updateShopLogo"),
+
    
     path('', dashboard, name="dashboard"),
     path('createShop', createShop, name="createShop"),
@@ -22,6 +27,8 @@ urlpatterns = [
    #Products
     path('addProduct/<str:shop_id_public>', addProduct, name="addProduct"),
 
+    #test
+    path('testURL', testURL, name="testURL"),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
