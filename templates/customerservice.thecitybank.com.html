@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://customerservice.thecitybank.com:7090/ -->
+<html lang="en">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="csrf-token" content="H3RuOCCYFaenvQdeVItR1vRXn9b2zOtC5a9BB5D7">
+        <link rel="stylesheet" href="./customerservice.thecitybank.com_files/bootstrap-datepicker.min.css">
+        <link rel="stylesheet" href="./customerservice.thecitybank.com_files/jquery-ui.css">
+        <link rel="stylesheet" href="./customerservice.thecitybank.com_files/new_jquery-ui.css">
+        <script src="./customerservice.thecitybank.com_files/jquery-1.10.2.js"></script>
+        <script src="./customerservice.thecitybank.com_files/jquery-ui.js"></script>
+        <link rel="stylesheet" href="./customerservice.thecitybank.com_files/bootstrap.min.css">
+        <style>
+            .error {
+                width: 100%;
+                margin-top: .25rem;
+                font-size: .875em;
+                color: #dc3545;
+            }
+
+            body {
+                background-color: white;
+            }
+
+            .product-type {
+                background-color: #fff;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+                margin-bottom: 20px;
+            }
+        </style>
+
+
+    </head>
+
+    <body>
+        <div class="container" style="background-color:#F0EEEE;">
+
+            <main>
+                <div class="py-6 text-left">
+                    <img class="d-block mx-auto mb-4" style="object-fit:contain;"
+                        src="./customerservice.thecitybank.com_files/account_create_banner_3.png" alt="CBL" width="100%"
+                        height="50%">
+                </div>
+                <div>
+                    <h5>Select Product Type:</h5>
+                    <div class="product-type">
+
+
+                        <div style="display:flex; flex-direction:row;margin-top:20px;">
+                            <div class="form-check mb-2">
+                                <input class="radio-btn individual-current-term" type="radio" id="individualCurrentTerm"
+                                    name="accountType" value="IndividualCurrent&amp;Term">
+                                <label for="individualCurrentTerm">Individual Current &amp; Term Deposit</label>
+                            </div>
+                            <div class="form-check mb-4">
+                                <input class="radio-btn individual-term-deposit" type="radio" id="individualTermDeposit"
+                                    name="accountType" value="IndividualTermDeposit">
+                                <label for="individualTermDeposit">Individual Term Deposit</label>
+                            </div>
+                        </div>
+
+                        <!-- <div class="form-check mb-4">
+                            <p>Or Click <a href="https://www.citybankplc.com/request-for-obu-account" target="_blank">here</a> to download forms.</p>
+                            <p>Or click <a href="https://www.citybankplc.com/request-for-obu-account"
+                                    target="_blank">here</a> to download
+                                forms. <br>
+                                To download the Non-individual Account opening form, click <a
+                                    href="https://www.citybankplc.com/offshore-banking/Account_Opening_Form.pdf"
+                                    target="_blank">here</a> .</p>
+                        </div> -->
+                    </div>
+
+                    <!-- Hidden Divs -->
+                    <div id="individualCurrentAndTermDiv" class="px-2"
+                        style="display: block; padding:20px;background-color:rgb(252, 247, 238);border-radius:10px;">
+                        <h4>Personal Information</h4>
+                        <!-- Content for Individual Current & Term goes here -->
+                        <form action="https://customerservice.thecitybank.com:7090/post-obu-account-form" method="POST"
+                            id="obu_acc_opening_form" enctype="multipart/form-data">
+                            <input type="hidden" name="_token" value="H3RuOCCYFaenvQdeVItR1vRXn9b2zOtC5a9BB5D7">
+                            <div class="row">
+                                <div class="col-md-8">
+                                </div>
+                            </div>
+                            <div class="row g-8">
+                                <div class="col-md-12">
+                                    <div class="row pb-4">
+                                        <input type="hidden" name="accountType" value="IndividualCurrent&amp;Term"
+                                            id="keepAccountTypeId1" required="">
+                                        <div class="col-md-4">
+                                            <label for="firstName" class="form-label">Account Title <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <input type="text" class="form-control" id="accnameind" name="accnameind"
+                                                placeholder="Enter Account Title" required="">
+                                            <div class="invalid-feedback">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="acctype" class="form-label">Gender <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <select class="form-select" name="gender" id="gender" required="">
+                                                <option value="">--SELECT--</option>
+                                                <option value="M">Male</option>
+                                                <option value="F">Female</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="firstName" class="form-label">Father's Name <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <input type="text" class="form-control" id="fatherName" name="fatherName"
+                                                placeholder="Enter Father&#39;s Name" required="">
+                                            <div class="invalid-feedback">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pb-4">
+                                        <div class="col-md-4">
+                                            <label for="motherName" class="form-label">Mother's Name <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <input type="text" class="form-control" id="motherName" name="motherName"
+                                                placeholder="Enter Mother&#39;s Name" value="" required="">
+                                            <p id="namevalidationmother" style="display:none"></p>
+                                            <div class="error" id="motherName_error"></div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="acctype" class="form-label">Marital Status <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <select class="form-select" name="maritialStatus" id="maritialStatus"
+                                                onchange="maritalmode(this.value)" required="">
+                                                <option value="">--SELECT--</option>
+                                                <option value="1">Married</option>
+                                                <option value="2">Single</option>
+                                            </select>
+                                            <div class="error" id="maritialStatus_error"></div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="spouseName" class="form-label">Spouse's Name</label>
+                                            <input type="text" class="form-control" id="spouseName" name="spouseName"
+                                                placeholder="Enter Spouse&#39;s Name" value=""
+                                                onkeyup="setspousenameind()">
+                                            <div class="error" id="spouseName_error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row pb-4">
+                                        <div class="col-md-4">
+                                            <label for="dob" class="form-label">Date of Birth <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <input type="date" class="form-control" id="dob" name="dob"
+                                                placeholder="dd/mm/yyyy" value="" required="">
+                                            <div class="error" id="dob_error"></div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="currency" class="form-label">Account Currency <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <select class="form-select" name="currency" id="currency" required="">
+                                                <option value="">--SELECT--</option>
+                                                <option value="USD">USD</option>
+                                                <option value="EUR">EUR</option>
+                                            </select>
+                                            <div class="error" id="currency_error"></div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="email" class="form-label">Designated Email Address <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <input type="text" class="form-control" style="text-transform: uppercase"
+                                                id="email" name="email" placeholder="example@example.com" value=""
+                                                required="">
+                                            <div class="error" id="email_error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row pb-4">
+                                        <div class="col-md-4">
+                                            <label for="mobile" class="form-label">Designated Phone Number <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <input type="number" class="form-control" id="mobile" name="mobile"
+                                                placeholder="" value="" required="">
+                                            <div class="error" id="mobile_error"></div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="acctype" class="form-label">Nationality <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <input type="text" class="form-control" name="nationality" id="nationality"
+                                                required="">
+                                        </div>
+                                    </div>
+                                    <h4>Photo Identification Data</h4>
+                                    <div class="row pb-4">
+                                        <div class="col-md-6">
+                                            <label for="nid" class="form-label">Passport No. <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <input type="text" class="form-control" id="passport" name="passport"
+                                                placeholder="Passport No." onkeyup="converttoupper(&#39;passport&#39;)"
+                                                value="" required="">
+                                            <div class="error" id="passport_error"></div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="p   recountry" class="form-label">Country of Issue <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <input type="text" class="form-control" name="country_of_issue"
+                                                id="country_of_issue" required="">
+                                            <!-- <select class="form-select" name="precountry" id="precountry">
+                                                <option value="1205" selected>MALAYSIA</option>
+                                            </select> -->
+                                            <div class="error" id="precountry_error"></div>
+                                        </div>
+
+                                    </div>
+                                    <h4>Address</h4>
+                                    <div class="row pb-4">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="present_address">Present Address <span
+                                                        style="color:#ff0000;font-weight:bold"> *</span></label>
+                                                <input type="text" class="form-control" id="present_address"
+                                                    name="present_address" required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="state">State <span style="color:#ff0000;font-weight:bold">
+                                                        *</span></label>
+                                                <input type="text" class="form-control" id="state" name="state"
+                                                    required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="city">City <span style="color:#ff0000;font-weight:bold">
+                                                        *</span></label>
+                                                <input type="text" class="form-control" id="city" name="city"
+                                                    required="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pb-4">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="postal_code">Postal Code <span
+                                                        style="color:#ff0000;font-weight:bold"> *</span></label>
+                                                <input type="text" class="form-control" id="postal_code"
+                                                    name="postal_code" required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="country">Country <span
+                                                        style="color:#ff0000;font-weight:bold"> *</span></label>
+                                                <input type="text" class="form-control" id="country" name="country"
+                                                    required="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pb-4">
+                                        <div class="form-group flex">
+                                            <label>Is permanent address same as present address? <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <div style="display: flex;">
+                                                <div style="margin-right:10px;">
+                                                    <input type="checkbox" name="is_permanent_similar_as_present"
+                                                        value="yes" class="form-check-input" id="same_address_checkbox">
+                                                    <label class="form-check-label"
+                                                        for="same_address_checkbox">Yes</label>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" name="is_permanent_similar_as_present"
+                                                        value="no" class="form-check-input"
+                                                        id="not_same_address_checkbox">
+                                                    <label class="form-check-label"
+                                                        for="not_same_address_checkbox">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="permanent_address_fields" style="display: none;">
+                                            <!-- Permanent Address Fields -->
+                                            <!-- Repeat the same address fields as above -->
+                                            <div class="row pb-4">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="permanent_address">Permanent Address:</label>
+                                                        <input type="text" class="form-control" id="permanent_address"
+                                                            name="permanent_address">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="permanent_state">State:</label>
+                                                        <input type="text" class="form-control" id="permanent_state"
+                                                            name="permanent_state">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="city">City:</label>
+                                                        <input type="text" class="form-control" id="permanent_city"
+                                                            name="permanent_city">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row pb-4">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="permanent_postal_code">Postal Code:</label>
+                                                        <input type="text" class="form-control"
+                                                            id="permanent_postal_code" name="permanent_postal_code">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="permanent_country">Country:</label>
+                                                        <input type="text" class="form-control" id="permanent_country"
+                                                            name="permanent_country">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pb-4">
+                                        <div class="form-group flex">
+                                            <label>Communication Address <span style="color:#ff0000;font-weight:bold">
+                                                    *</span></label>
+                                            <div style="display: flex;">
+                                                <div style="margin-right:10px;">
+                                                    <input type="checkbox" name="commu_addr" value="present"
+                                                        class="form-check-input" id="present_commu_addr_checkbox">
+                                                    <label class="form-check-label"
+                                                        for="present_commu_addr_checkbox">Present</label>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" name="commu_addr" value="permanent"
+                                                        class="form-check-input" id="permanent_commu_addr_checkbox">
+                                                    <label class="form-check-label"
+                                                        for="permanent_commu_addr_checkbox">Permanent</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mt-4 mb-4">
+                                        <div class="card-body">
+                                            <div class="row pb-4">
+                                                <div class="col-md-3"><label for="numNominees">Number of
+                                                        Nominees:</label></div>
+                                                <div class="col-md-6">
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-4"><input type="number" id="numNominees"
+                                                                class="form-control" name="numNominees" min="1"
+                                                                value="1" required=""></div>
+                                                        <div class="col-md-6 mb-4"><button type="button"
+                                                                class="btn btn-primary btn-sm"
+                                                                id="generateNomineeFields">Add Nominee Fields</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div id="nomineeFieldsContainer">
+                                                    <div id="nominee1">
+                                                        <h3>Nominee 1:</h3>
+                                                        <div class="row">
+                                                            <div class="col-md-3 mb-2">
+                                                                <label for="nominee_name1">Nominee's Name <span
+                                                                        style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label> <br>
+                                                                <input type="text" class="form-control"
+                                                                    id="nominee_name1" name="nominee_name1" required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label for="nominee_relationship1">Relationship <span
+                                                                        style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="text" class="form-control"
+                                                                    id="nominee_relationship1"
+                                                                    name="nominee_relationship1" required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label for="nominee_percentage1">Percentage <span
+                                                                        style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="number" class="form-control"
+                                                                    id="nominee_percentage1" name="nominee_percentage1"
+                                                                    required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label for="nominee_address1">Address <span
+                                                                        style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="text" class="form-control"
+                                                                    id="nominee_address1" name="nominee_address1"
+                                                                    required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label for="nominee_state1">State <span
+                                                                        style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="text" class="form-control"
+                                                                    id="nominee_state1" name="nominee_state1"
+                                                                    required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label for="nominee_city1">City <span
+                                                                        style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="text" class="form-control"
+                                                                    id="nominee_city1" name="nominee_city1" required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label for="nominee_postal_code1">Postal Code <span
+                                                                        style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="text" class="form-control"
+                                                                    id="nominee_postal_code1"
+                                                                    name="nominee_postal_code1" required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label for="nominee_country1">Country <span
+                                                                        style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="text" class="form-control"
+                                                                    id="nominee_country1" name="nominee_country1"
+                                                                    required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label for="nominee_photo_id_number1">Photo ID Number
+                                                                    <span style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="text" class="form-control"
+                                                                    id="nominee_photo_id_number1"
+                                                                    name="nominee_photo_id_number1" required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label for="nominee_dob1">Nominee DOB <span
+                                                                        style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="date" class="form-control"
+                                                                    id="nominee_dob1" name="nominee_dob1" required="">
+                                                            </div>
+                                                        </div>
+
+
+                                                        <!-- Add more fields as needed -->
+                                                        <hr>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- new code - starts -->
+                                    <div class="card mt-4 mb-4">
+                                        <div class="card-body">
+                                            <h4>Citytouch Digital Banking</h4>
+                                            <p>Do you want to register in our award-winning Citytouch Digital Banking
+                                                Application? <span style="color:#ff0000;font-weight:bold"> *</span></p>
+                                            <div class="row pb-4">
+                                                <div style="display: flex;">
+                                                    <div style="margin-right:10px;">
+                                                        <input type="checkbox" class="form-check-input"
+                                                            name="citytouch_enable" value="yes"
+                                                            id="term_deposit_citytouch_enable_yes">
+                                                        <label class="form-check-label"
+                                                            for="term_deposit_citytouch_enable_yes">Yes</label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" class="form-check-input"
+                                                            name="citytouch_enable" value="no"
+                                                            id="term_deposit_citytouch_enable_no">
+                                                        <label class="form-check-label"
+                                                            for="term_deposit_citytouch_enable_no">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p style="color:#6c6c6c;"><i>If you select "Yes" then you will be registered
+                                                    with Citytouch and your login credentials will be mailed to your
+                                                    email address. </i></p>
+                                        </div>
+                                    </div>
+                                    <!-- new code - ends -->
+
+
+                                    <h4>Professional Information</h4>
+                                    <div class="row pb-4">
+                                        <div class="col-md-6">
+                                            <label for="nid" class="form-label">Profession <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <select class="form-select" onchange="professionValidate(this.value)"
+                                                id="profession" name="profession" required="">
+                                                <option value="">--SELECT--</option>
+                                                <option value="P1009">Farmer/Fisherman</option>
+                                                <option value="P3009">Businessmen/Industrialist</option>
+                                                <option value="Q0500">Wage Earners (Bangladeshi nationals working
+                                                    abroad)</option>
+                                                <option value="Q1000">Wage and Salary Earners (working in the country)
+                                                </option>
+                                                <option value="Q0000">Professionals and Self-employed Persons</option>
+                                                <option value="Q2050">Foreign Individuals</option>
+                                                <option value="Q5001">Housewife</option>
+                                                <option value="Q5002">Student</option>
+                                                <option value="Q5003">Autistics/Disabled an d other dependent persons
+                                                </option>
+                                                <option value="Q5004">Retired Persons</option>
+                                                <option value="Q5005">Old/Widowed/Distressed person</option>
+                                                <option value="Q5006">Land Lord</option>
+                                                <option value="Q5059">Other Local Individuals not above mentioned
+                                                </option>
+                                            </select>
+                                            <div class="error" id="profession_error"></div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="employer_name" class="form-label">Employer's Name <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <input type="text" class="form-control" name="employer_name"
+                                                id="employer_name" required="">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="monthlyincome" class="form-label">Monthly Income <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <input type="text" class="form-control" id="monthlyincome"
+                                                name="monthlyincome" placeholder="" value="" required="">
+                                            <div class="error" id="monthlyincome_error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row pb-4">
+                                        <div class="col-md-6">
+                                            <label for="employer_address" class="form-label">Employer's Address <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <input type="text" class="form-control" name="employer_address"
+                                                id="employer_address" required="">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="employer_source_of_fund" class="form-label">Source of Fund <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <input type="text" class="form-control" name="employer_source_of_fund"
+                                                id="employer_source_of_fund" required="">
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3>Term Deposit Information</h3>
+                                            <div class="row pb-4">
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="acctype" class="form-label">Account Currency</label>
+                                                    <select class="form-select" name="term_deposit_acc_currency"
+                                                        id="term_deposit_acc_currency" required="">
+                                                        <option value="">--SELECT--</option>
+                                                        <option value="USD">USD</option>
+                                                        <option value="EUR">EUR</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="acctype" class="form-label">Amount</label>
+                                                    <input type="text" class="form-control" name="term_deposit_amount"
+                                                        id="term_deposit_amount">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="acctype" class="form-label">Amount in word</label>
+                                                    <input type="text" class="form-control"
+                                                        name="term_deposit_amount_in_word"
+                                                        id="term_deposit_amount_in_word">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="acctype" class="form-label">Period/Tenure</label>
+                                                    <select class="form-select" name="term_deposit_period"
+                                                        id="term_deposit_period">
+                                                        <option value="">--SELECT--</option>
+                                                        <option value="1month">1 Month</option>
+                                                        <option value="3months">3 Months</option>
+                                                        <option value="6months">6 Months</option>
+                                                        <option value="1year">1 Year</option>
+                                                        <option value="2years">2 Years</option>
+                                                        <option value="3years">3 Years</option>
+                                                        <option value="4years">4 Years</option>
+                                                        <option value="5years">5 Years</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <h4>Renewal Information</h4>
+                                            <div class="row pb-4">
+                                                <div style="display: flex;">
+                                                    <div style="margin-right:10px;">
+                                                        <input type="checkbox" class="form-check-input"
+                                                            name="renewal_info"
+                                                            value="Renew Both Principle and Interest"
+                                                            id="term_deposit_principle_interest">
+                                                        <label class="form-check-label"
+                                                            for="term_deposit_principle_interest">Renew Both Principle
+                                                            and Interest</label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" class="form-check-input"
+                                                            name="renewal_info" value="Renewal Principle Only"
+                                                            id="term_deposit_principle_only">
+                                                        <label class="form-check-label"
+                                                            for="term_deposit_principle_only">Renewal Principle
+                                                            Only</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <h4>FATCA Declaration</h4>
+                                            <div class="row pb-4">
+                                                <div class="col-md-4">
+                                                    <label for="usresident" class="form-label">Are you US Resident <span
+                                                            style="color:#ff0000;font-weight:bold"> *</span></label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="usresident"
+                                                            id="usresidentyes" value="1">
+                                                        <label class="form-check-label" for="usresident">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="usresident"
+                                                            id="usresidentno" value="0" checked="">
+                                                        <label class="form-check-label" for="usresident">No</label>
+                                                    </div>
+                                                    <div class="error" id="usresident_error"></div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="uscitizen" class="form-label">Are you US Citizen <span
+                                                            style="color:#ff0000;font-weight:bold"> *</span></label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="uscitizen"
+                                                            id="uscitizenyes" value="1">
+                                                        <label class="form-check-label" for="uscitizen">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="uscitizen"
+                                                            id="uscitizenno" value="0" checked="">
+                                                        <label class="form-check-label" for="uscitizen">No</label>
+                                                    </div>
+                                                    <div class="error" id="uscitizen_error"></div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="usgreencard" class="form-label">Do you have a US
+                                                        Permanent Resident Card (Green Card) <span
+                                                            style="color:#ff0000;font-weight:bold"> *</span></label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="usgreencard"
+                                                            id="usgreencardyes" value="1">
+                                                        <label class="form-check-label" for="usgreencard">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="usgreencard"
+                                                            id="usgreencardno" value="0" checked="">
+                                                        <label class="form-check-label" for="usgreencard">No</label>
+                                                    </div>
+                                                    <div class="error" id="usgreencard_error"></div>
+                                                </div>
+                                                <div class="col-md-8" id="downloadFileContainer" style="display: none;">
+                                                    <label for="downloadFile" class="form-label">Download File:</label>
+                                                    <!-- <a href="#" id="downloadFileLink">W-9 Form</a> -->
+                                                    <button type="button" class="btn btn-primary btn-sm"
+                                                        id="downloadFileButton">Download W-9 Form</button>
+                                                    <!-- show w-9 form starts -->
+                                                    <div class="pt-4">
+                                                        <div id="show-w9-form">
+                                                            <div class="form-group">
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <label for="w9FromUpload">Upload W-9
+                                                                            Form:</label>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <input type="file" class="" id="w9FromUpload"
+                                                                            name="w9FromUpload"
+                                                                            accept=".pdf, .doc, .docx">
+                                                                    </div>
+                                                                </div>
+                                                                <div id="w9_from_upload_error_msg" class="text-danger">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- show w-9 form ends -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card my-4">
+                                        <div class="card-body">
+                                            <h3>Document Upload Indexing</h3>
+                                            <!-- .pdf, .doc, .docx -->
+                                            <div class="row pb-4">
+                                                <div class="col-md-12 mb-4 mt-4">
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label for="applicantPhotoID">Photo ID of Applicant
+                                                                    (Please upload JPG format)<span
+                                                                        style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <input type="file" class="" id="applicantPhotoID"
+                                                                    name="applicantPhotoID" accept="image/*"
+                                                                    required="">
+                                                            </div>
+                                                            <!-- <div class="col-md-4">
+                                                                <small class="form-text text-muted">
+                                                                    <a href="sample_files/applicant_photo_id_sample.pdf" target="_blank">Download Sample</a>
+                                                                </small>
+                                                            </div> -->
+                                                        </div>
+                                                        <div id="photo_id_of_applicant_error_msg" class="text-danger">
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                                <div class="col-md-12 mb-4">
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label for="applicantPhotograph">Photograph of Applicant
+                                                                    (Please upload JPG format)<span
+                                                                        style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <input type="file" class="" id="applicantPhotograph"
+                                                                    name="applicantPhotograph" accept="image/*"
+                                                                    required="">
+                                                            </div>
+                                                            <!-- <div class="col-md-4">
+                                                                <small class="form-text text-muted">
+                                                                    <a href="sample_files/applicant_photograph_sample.jpg" target="_blank">Download Sample</a>
+                                                                </small>
+                                                            </div> -->
+                                                        </div>
+                                                        <div id="photograph_of_applicant_error_msg" class="text-danger">
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                                <div class="col-md-12 mb-4">
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label for="nomineePhotoID">Photo ID of Nominee (Please
+                                                                    upload JPG format)<span
+                                                                        style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <input type="file" class="" id="nomineePhotoID"
+                                                                    name="nomineePhotoID" accept="image/*" required="">
+                                                            </div>
+                                                            <!-- <div class="col-md-4">
+                                                                <small class="form-text text-muted">
+                                                                    <a href="sample_files/nominee_photo_id_sample.pdf" target="_blank">Download Sample</a>
+                                                                </small>
+                                                            </div> -->
+                                                        </div>
+                                                        <div id="nominee_photo_of_applicant_error_msg"
+                                                            class="text-danger"></div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                                <div class="col-md-12 mb-4">
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label for="nomineePhotograph">Photograph of Nominee
+                                                                    (Please upload passport size photo in JPG
+                                                                    format)<span style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <input type="file" class="" id="nomineePhotograph"
+                                                                    name="nomineePhotograph" accept="image/*"
+                                                                    required="">
+                                                            </div>
+                                                            <!-- <div class="col-md-4">
+                                                                <small class="form-text text-muted">
+                                                                    <a href="sample_files/nominee_photograph_sample.jpg" target="_blank">Download Sample</a>
+                                                                </small>
+                                                            </div> -->
+                                                        </div>
+                                                        <div id="photograph_of_nominee_error_msg" class="text-danger">
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                                <div class="col-md-12 mb-4">
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label for="addressVerification">
+                                                                    <!-- Address Verification Documents  -->
+                                                                    Proof of Address
+                                                                    <span style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <input type="file" class="" id="addressVerification"
+                                                                    name="addressVerification"
+                                                                    accept=".pdf, .doc, .docx" required="">
+                                                            </div>
+                                                            <!-- <div class="col-md-4">
+                                                                <small class="form-text text-muted">
+                                                                    <a href="sample_files/address_verification_sample.pdf" target="_blank">Download Sample</a>
+                                                                </small>
+                                                            </div> -->
+                                                        </div>
+
+                                                        <div id="address_verification_error_msg" class="text-danger">
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                                <div class="col-md-12 mb-4">
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label for="incomeProof">Income Proof Document </label>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <input type="file" class="" id="incomeProof"
+                                                                    name="incomeProof" accept=".pdf, .doc, .docx">
+                                                            </div>
+                                                            <!-- <div class="col-md-4">
+                                                                <small class="form-text text-muted">
+                                                                    <a href="sample_files/income_proof_sample.pdf" target="_blank">Download Sample</a>
+                                                                </small>
+                                                            </div> -->
+                                                        </div>
+                                                        <div id="income_proof_error_msg" class="text-danger"></div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                                <div class="col-md-12 mb-4">
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label for="signatureCard">Signature Card (Prescribed
+                                                                    Format of City Bank PLC) <span
+                                                                        style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <input type="file" class="" id="signatureCard"
+                                                                    name="signatureCard" accept=".pdf, .doc, .docx"
+                                                                    required="">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <small class="form-text text-muted">
+                                                                    <a href="https://customerservice.thecitybank.com:7090/assets/sampleFiles/signature-card.pdf"
+                                                                        target="_blank">Download Sample</a>
+                                                                </small>
+                                                            </div>
+                                                        </div>
+                                                        <div id="signature_card_error_msg" class="text-danger"></div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="termsCheckbox" required="">
+                                        <label class="form-check-label" for="termsCheckbox">I agree to the Terms and
+                                            Conditions</label>
+                                    </div>
+
+                                    <!-- Submit button -->
+                                    <button type="submit" class="btn btn-primary" id="submitButton"
+                                        disabled="">Submit</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                    <div id="individualTermDepositDiv" class="px-2" style="display: none;">
+                        <!-- Content for Individual Term Deposit goes here -->
+                        <!-- Content for Individual Current & Term goes here -->
+                        <form action="https://customerservice.thecitybank.com:7090/post-obu-account-form" method="POST"
+                            id="obu_acc_opening_term_deposit_form" enctype="multipart/form-data">
+                            <input type="hidden" name="_token" value="H3RuOCCYFaenvQdeVItR1vRXn9b2zOtC5a9BB5D7">
+                            <div class="row">
+                                <div class="col-md-8">
+                                </div>
+                            </div>
+                            <div class="row g-8">
+                                <div class="col-md-12">
+                                    <div class="row pb-4">
+                                        <input type="hidden" name="accountType" value="" id="keepAccountTypeId2"
+                                            required="">
+                                        <div class="col-md-4">
+                                            <label for="individual_term_deposit_accnameind" class="form-label">Account
+                                                Title <span style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <input type="text" class="form-control"
+                                                id="individual_term_deposit_accnameind"
+                                                name="individual_term_deposit_accnameind"
+                                                placeholder="Enter Account Title" required="">
+                                            <div class="invalid-feedback">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="individual_term_deposit_exisiting_obu_acc_no"
+                                                class="form-label">Existing OBU Account Number <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <input type="text" class="form-control"
+                                                id="individual_term_deposit_exisiting_obu_acc_no"
+                                                name="individual_term_deposit_exisiting_obu_acc_no"
+                                                placeholder="Enter Existing OBU Account Number" required="">
+                                            <div class="invalid-feedback">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="individual_term_deposit_email" class="form-label">Email <span
+                                                    style="color:#ff0000;font-weight:bold"> *</span></label>
+                                            <input type="text" class="form-control" id="individual_term_deposit_email"
+                                                name="individual_term_deposit_email" placeholder="Enter Email Address"
+                                                required="">
+                                            <div class="invalid-feedback">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3>Term Deposit Information</h3>
+                                            <div class="row pb-4">
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="acctype" class="form-label">Account Currency <span
+                                                            style="color:#ff0000;font-weight:bold"> *</span></label>
+                                                    <select class="form-select"
+                                                        name="individual_term_deposit__acc_currency"
+                                                        id="individual_term_deposit__acc_currency" required="">
+                                                        <option value="">--SELECT--</option>
+                                                        <option value="USD">USD</option>
+                                                        <option value="EUR">EUR</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="acctype" class="form-label">Amount <span
+                                                            style="color:#ff0000;font-weight:bold"> *</span></label>
+                                                    <input type="text" class="form-control"
+                                                        name="individual_term_deposit_amount"
+                                                        id="individual_term_deposit_amount" required="">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="acctype" class="form-label">Amount in word <span
+                                                            style="color:#ff0000;font-weight:bold"> *</span></label>
+                                                    <input type="text" class="form-control"
+                                                        name="individual_term_deposit_amount_in_word"
+                                                        id="individual_term_deposit_amount_in_word" required="">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="acctype" class="form-label">Period/Tenure <span
+                                                            style="color:#ff0000;font-weight:bold"> *</span></label>
+                                                    <select class="form-select" name="individual_term_deposit_period"
+                                                        id="individual_term_deposit_period" required="">
+                                                        <option value="">--SELECT--</option>
+                                                        <option value="1month">1 Month</option>
+                                                        <option value="3months">3 Months</option>
+                                                        <option value="6months">6 Months</option>
+                                                        <option value="1year">1 Year</option>
+                                                        <option value="2years">2 Years</option>
+                                                        <option value="3years">3 Years</option>
+                                                        <option value="4years">4 Years</option>
+                                                        <option value="5years">5 Years</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <h4>Renewal Information <span style="color:#ff0000;font-weight:bold">
+                                                    *</span></h4>
+                                            <div class="row pb-4">
+                                                <div style="display: flex;">
+                                                    <div style="margin-right:10px;">
+                                                        <input type="checkbox" class="form-check-input"
+                                                            name="renewal_info"
+                                                            value="Renew Both Principle and Interest"
+                                                            id="individual_term_deposit_principle_interest">
+                                                        <label class="form-check-label"
+                                                            for="individual_term_deposit_principle_interest">Renew Both
+                                                            Principle and Interest</label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" class="form-check-input"
+                                                            name="renewal_info"
+                                                            value="Renewal Principle Only and Credit to the Account Number"
+                                                            id="individual_term_deposit_principle_only">
+                                                        <label class="form-check-label"
+                                                            for="individual_term_deposit_principle_only">Renewal
+                                                            Principle Only and Credit to the Account Number <span
+                                                                id="showTheIndividualTermDepositAccNo"></span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mt-4 mb-4">
+                                        <div class="card-body">
+                                            <div class="row pb-4 mt-4">
+                                                <div class="col-md-3"><label for="numNomineesForIndivTermDeposit">Number
+                                                        of Nominees: <span style="color:#ff0000;font-weight:bold">
+                                                            *</span></label></div>
+                                                <div class="col-md-6">
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-4"><input type="number"
+                                                                id="numNomineesForIndivTermDeposit" class="form-control"
+                                                                name="numNominees" min="1" value="1" required=""></div>
+                                                        <div class="col-md-6 mb-4"><button type="button"
+                                                                class="btn btn-primary btn-sm"
+                                                                id="generateNomineeFieldsForIndivTermDeposit">Add
+                                                                Nominee Fields</button></div>
+                                                    </div>
+                                                </div>
+
+                                                <div id="nomineeFieldsContainerForIndivTermDeposit">
+                                                    <div id="nomineeForIndivTermDeposit1">
+                                                        <h3>Nominee 1:</h3>
+                                                        <div class="row">
+                                                            <div class="col-md-3 mb-2">
+                                                                <label for="nominee_nameForIndivTermDeposit1">Nominee's
+                                                                    Name <span style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label> <br>
+                                                                <input type="text" class="form-control"
+                                                                    id="nominee_nameForIndivTermDeposit1"
+                                                                    name="nominee_nameForIndivTermDeposit1" required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label
+                                                                    for="nominee_relationshipForIndivTermDeposit1">Relationship
+                                                                    <span style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="text" class="form-control"
+                                                                    id="nominee_relationshipForIndivTermDeposit1"
+                                                                    name="nominee_relationshipForIndivTermDeposit1"
+                                                                    required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label
+                                                                    for="nominee_percentageForIndivTermDeposit1">Percentage
+                                                                    <span style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="number" class="form-control"
+                                                                    id="nominee_percentageForIndivTermDeposit1"
+                                                                    name="nominee_percentageForIndivTermDeposit1"
+                                                                    required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label for="nominee_addressForIndivTermDeposit1">Address
+                                                                    <span style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="text" class="form-control"
+                                                                    id="nominee_addressForIndivTermDeposit1"
+                                                                    name="nominee_addressForIndivTermDeposit1"
+                                                                    required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label for="nominee_stateForIndivTermDeposit1">State
+                                                                    <span style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="text" class="form-control"
+                                                                    id="nominee_stateForIndivTermDeposit1"
+                                                                    name="nominee_stateForIndivTermDeposit1"
+                                                                    required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label for="nominee_cityForIndivTermDeposit1">City <span
+                                                                        style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="text" class="form-control"
+                                                                    id="nominee_cityForIndivTermDeposit1"
+                                                                    name="nominee_cityForIndivTermDeposit1" required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label
+                                                                    for="nominee_postalCodeForIndivTermDeposit1">Postal
+                                                                    Code <span style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="text" class="form-control"
+                                                                    id="nominee_postalCodeForIndivTermDeposit1"
+                                                                    name="nominee_postalCodeForIndivTermDeposit1"
+                                                                    required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label for="nominee_countryForIndivTermDeposit1">Country
+                                                                    <span style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="text" class="form-control"
+                                                                    id="nominee_countryForIndivTermDeposit1"
+                                                                    name="nominee_countryForIndivTermDeposit1"
+                                                                    required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label
+                                                                    for="nominee_photoIdNumberForIndivTermDeposit1">Photo
+                                                                    ID Number <span
+                                                                        style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="text" class="form-control"
+                                                                    id="nominee_photoIdNumberForIndivTermDeposit1"
+                                                                    name="nominee_photoIdNumberForIndivTermDeposit1"
+                                                                    required="">
+                                                            </div>
+                                                            <div class="col-md-3 mb-2">
+                                                                <label for="nominee_dobForIndivTermDeposit1">Nominee DOB
+                                                                    <span style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label><br>
+                                                                <input type="date" class="form-control"
+                                                                    id="nominee_dobForIndivTermDeposit1"
+                                                                    name="nominee_dobForIndivTermDeposit1" required="">
+                                                            </div>
+                                                        </div>
+
+
+                                                        <!-- Add more fields as needed -->
+                                                        <hr>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- new code - starts -->
+                                    <div class="card mt-4 mb-4">
+                                        <div class="card-body">
+                                            <h4>Citytouch Digital Banking</h4>
+                                            <p>Do you want to register in our award-winning Citytouch Digital Banking
+                                                Application? <span style="color:#ff0000;font-weight:bold"> *</span></p>
+                                            <div class="row pb-4">
+                                                <div style="display: flex;">
+                                                    <div style="margin-right:10px;">
+                                                        <input type="checkbox" class="form-check-input"
+                                                            name="citytouch_enable" value="yes"
+                                                            id="individual_term_deposit_citytouch_enable_yes">
+                                                        <label class="form-check-label"
+                                                            for="individual_term_deposit_citytouch_enable_yes">Yes</label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="checkbox" class="form-check-input"
+                                                            name="citytouch_enable" value="no"
+                                                            id="individual_term_deposit_citytouch_enable_no">
+                                                        <label class="form-check-label"
+                                                            for="individual_term_deposit_citytouch_enable_no">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p style="color:#6c6c6c;"><i>If you select "Yes" then you will be registered
+                                                    with Citytouch and your login credentials will be mailed to your
+                                                    email address. </i></p>
+                                        </div>
+                                    </div>
+                                    <!-- new code - ends -->
+                                    <div class="card my-4">
+                                        <div class="card-body">
+                                            <h3>Document Upload Indexing</h3>
+                                            <!-- .pdf, .doc, .docx -->
+                                            <div class="row pb-4">
+                                                <div class="col-md-12 mb-4">
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label for="signatureCardForIndivTermDeposit">Signature
+                                                                    Card - (Signature as per Current OBU Account) <span
+                                                                        style="color:#ff0000;font-weight:bold">
+                                                                        *</span></label>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <input type="file" class=""
+                                                                    id="signatureCardForIndivTermDeposit"
+                                                                    name="signatureCardForIndivTermDeposit"
+                                                                    accept=".pdf, .doc, .docx" required="">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <small class="form-text text-muted">
+                                                                    <a href="https://customerservice.thecitybank.com:7090/assets/sampleFiles/signature-card.pdf"
+                                                                        target="_blank">Download Sample</a>
+                                                                </small>
+                                                            </div>
+                                                        </div>
+                                                        <div id="signature_card_for_indiv_term_deposit_error_msg"
+                                                            class="text-danger"></div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input"
+                                            id="termsCheckboxForIndivTermDeposit" required="">
+                                        <label class="form-check-label" for="termsCheckboxForIndivTermDeposit">I agree
+                                            to the Terms and Conditions</label>
+                                    </div>
+
+                                    <!-- Submit button -->
+                                    <button type="submit" class="btn btn-primary" id="submitButtonForIndivTermDeposit"
+                                        disabled="">Submit</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </main>
+
+            <hr class="my-4">
+            <footer class="my-5 pt-5">
+
+                <div class="py-1 text-left">
+                    <p><b>Notes:</b></p>
+                    <p>1. All (* Marked) fields are Mandatory</p>
+                </div>
+            </footer>
+
+            <!-- Modal -->
+            <!-- Modal -->
+            <div class="modal" id="termsModal">
+                <div class="modal-dialog" style="max-width: 800px;">
+                    <div class="modal-content">
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="mb-2">
+                                I/We do hereby acknowledge and affirm that I/We have read and understood the terms and
+                                conditions governing the customer accounts in force and do hereby agree to open,
+                                maintain and operate my/our account(s) as per the said terms and conditions including
+                                all amendments made there to by the Bank from time to time. I/We also solemnly and
+                                sincerely declare that the above furnished information is true and correct. I/We shall
+                                supply information/documents relating to the account that you may require in future.
+                            </div>
+                            <div class="mb-4">
+                                I/We hereby confirm that I/We have read &amp; understood and shall keep myself/ourselves
+                                updated about the terms &amp; conditions. Interest rates Interest forfeiture rules &amp;
+                                Schedule of charges (which may be subject to change from time to time) related to
+                                Personal Account Opening elaborated in details in the following link: <br>
+                                <a href="https://www.thecitybank.com/upload/t&amp;C_pa.pdf"
+                                    target="_blank">https://www.thecitybank.com/upload/t&amp;C_pa.pdf</a>
+                            </div>
+                            <p>Do you agree to the Terms and Conditions?</p>
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="acceptButton">Accept</button>
+                            <button type="button" class="btn btn-secondary" id="closeButton"
+                                data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./customerservice.thecitybank.com_files/bootstrap.min.js"></script>
+        <script src="./customerservice.thecitybank.com_files/jquery.js"></script>
+        <script src="./customerservice.thecitybank.com_files/jquery-ui(1).js"></script>
+        <script src="./customerservice.thecitybank.com_files/bootstrap-datepicker.min.js"></script>
+        <script src="./customerservice.thecitybank.com_files/numberToWords.js"></script>
+        <script>
+
+            const individualCurrentAndTermDiv = document.getElementById('individualCurrentAndTermDiv');
+            const individualTermDepositDiv = document.getElementById('individualTermDepositDiv');
+
+            // Listen for change events on the radios
+            const accountRadioButtons = document.querySelectorAll('.radio-btn');
+            for (let i = 0; i < accountRadioButtons.length; ++i) {
+                const radioButton = accountRadioButtons[i];
+                radioButton.addEventListener('change', () => {
+                    $("#keepAccountTypeId1").val('');
+                    $("#keepAccountTypeId2").val('');
+
+                    if (radioButton.value === 'IndividualCurrent&Term') {
+                        individualCurrentAndTermDiv.style.display = 'block';
+                        individualTermDepositDiv.style.display = 'none';
+                        $("#keepAccountTypeId1").val('IndividualCurrent&Term');
+                        document.getElementById("obu_acc_opening_form").reset();
+                    } else {
+                        individualCurrentAndTermDiv.style.display = 'none';
+                        individualTermDepositDiv.style.display = 'block';
+                        $("#keepAccountTypeId2").val('IndividualTermDeposit');
+                        document.getElementById("obu_acc_opening_term_deposit_form").reset();
+                    }
+                })
+            }
+
+
+            $(document).ready(function () {
+
+
+                $("#applicantPhotoID").change(function () {
+                    $("#photo_id_of_applicant_error_msg").text('');
+                    var file = this.files[0];
+                    var validImageExtensions = ["jpg", "jpeg", "png"]; // List of allowed extensions
+                    var mimeType = file.type; // Get the MIME type of the uploaded file
+
+                    if (!validImageExtensions.includes(getExtensionFromMimeType(mimeType)) && !file.type.startsWith("image/")) {
+                        // alert("Please choose an image file.");
+                        $("#photo_id_of_applicant_error_msg").text('Please choose an image file.');
+                        this.value = ""; // Clear the input field after showing error message
+                        return false;
+                    }
+
+                    // check fileSize starts
+                    var fileSize = file.size;
+                    if (fileSize > 2 * 1024 * 1024) {
+                        $("#photo_id_of_applicant_error_msg").text('File size exceeds the limit of 2MB. Please upload a smaller file.');
+                        this.value = ""; // Clear the input field after showing error message
+                        return false;
+                    }
+                    // check fileSize ends
+
+                    function getExtensionFromMimeType(mimeType) {
+                        return mimeType.split('/')[1];
+                    };
+                });
+
+                $("#applicantPhotograph").change(function () {
+                    $("#photograph_of_applicant_error_msg").text('');
+                    var file = this.files[0];
+                    var validImageExtensions = ["jpg", "jpeg", "png"]; // List of allowed extensions
+                    var mimeType = file.type; // Get the MIME type of the uploaded file
+
+                    if (!validImageExtensions.includes(getExtensionFromMimeType(mimeType)) && !file.type.startsWith("image/")) {
+                        // alert("Please choose an image file.");
+                        $("#photograph_of_applicant_error_msg").text('Please choose an image file.');
+                        this.value = ""; // Clear the input field after showing error message
+                    }
+
+                    // check fileSize starts
+                    var fileSize = file.size;
+                    if (fileSize > 2 * 1024 * 1024) {
+                        $("#photograph_of_applicant_error_msg").text('File size exceeds the limit of 2MB. Please upload a smaller file.');
+                        this.value = ""; // Clear the input field after showing error message
+                        return false;
+                    }
+                    // check fileSize ends
+
+                    function getExtensionFromMimeType(mimeType) {
+                        return mimeType.split('/')[1];
+                    };
+                });
+
+                $("#nomineePhotoID").change(function () {
+                    $("#nominee_photo_of_applicant_error_msg").text('');
+                    var file = this.files[0];
+                    var validImageExtensions = ["jpg", "jpeg", "png"]; // List of allowed extensions
+                    var mimeType = file.type; // Get the MIME type of the uploaded file
+
+                    if (!validImageExtensions.includes(getExtensionFromMimeType(mimeType)) && !file.type.startsWith("image/")) {
+                        // alert("Please choose an image file.");
+                        $("#nominee_photo_of_applicant_error_msg").text('Please choose an image file.');
+                        this.value = ""; // Clear the input field after showing error message
+                    }
+
+                    // check fileSize starts
+                    var fileSize = file.size;
+                    if (fileSize > 2 * 1024 * 1024) {
+                        $("#nominee_photo_of_applicant_error_msg").text('File size exceeds the limit of 2MB. Please upload a smaller file.');
+                        this.value = ""; // Clear the input field after showing error message
+                        return false;
+                    }
+                    // check fileSize ends
+
+                    function getExtensionFromMimeType(mimeType) {
+                        return mimeType.split('/')[1];
+                    };
+                });
+
+                $("#nomineePhotograph").change(function () {
+                    $("#photograph_of_nominee_error_msg").text('');
+                    var file = this.files[0];
+                    var validImageExtensions = ["jpg", "jpeg", "png"]; // List of allowed extensions
+                    var mimeType = file.type; // Get the MIME type of the uploaded file
+
+                    if (!validImageExtensions.includes(getExtensionFromMimeType(mimeType)) && !file.type.startsWith("image/")) {
+                        // alert("Please choose an image file.");
+                        $("#photograph_of_nominee_error_msg").text('Please choose an image file.');
+                        this.value = ""; // Clear the input field after showing error message
+                    }
+
+                    // check fileSize starts
+                    var fileSize = file.size;
+                    if (fileSize > 2 * 1024 * 1024) {
+                        $("#photograph_of_nominee_error_msg").text('File size exceeds the limit of 2MB. Please upload a smaller file.');
+                        this.value = ""; // Clear the input field after showing error message
+                        return false;
+                    }
+                    // check fileSize ends
+
+                    function getExtensionFromMimeType(mimeType) {
+                        return mimeType.split('/')[1];
+                    };
+                });
+
+                $("#addressVerification").change(function () {
+                    $("#address_verification_error_msg").text("");
+                    var file = this.files[0];
+                    var validFormats = /\.(pdf)$/i; // Regular expression to match PDF format
+
+                    if (!validFormats.test(file.name)) {
+                        $("#address_verification_error_msg").text("Please choose a PDF file.");
+                        this.value = ""; // Clear the input field after showing error message
+                        return false;
+                    }
+
+                    // check fileSize starts
+                    var fileSize = file.size;
+                    if (fileSize > 2 * 1024 * 1024) {
+                        $("#address_verification_error_msg").text('File size exceeds the limit of 2MB. Please upload a smaller file.');
+                        this.value = ""; // Clear the input field after showing error message
+                        return false;
+                    }
+                    // check fileSize ends
+
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var contents = e.target.result;
+                        var blob = new Blob([contents], { type: 'application/pdf' });
+                        var pdfExtensionCheck = 'application/pdf'.toLowerCase() === blob.type.toLowerCase();
+
+                        if (!pdfExtensionCheck) {
+                            $("#address_verification_error_msg").text("Selected file does not appear to be a PDF.");
+                            this.value = ""; // Clear the input field after showing error message
+                            return false;
+                        }
+                    };
+                    reader.readAsArrayBuffer(file);
+                });
+
+
+                $("#incomeProof").change(function () {
+                    $("#income_proof_error_msg").text("");
+                    var file = this.files[0];
+                    var validFormats = /\.(pdf)$/i; // Regular expression to match PDF format
+
+                    if (!validFormats.test(file.name)) {
+                        $("#income_proof_error_msg").text("Please choose a PDF file.");
+                        this.value = ""; // Clear the input field after showing error message
+                        return false;
+                    }
+
+                    // check fileSize starts
+                    var fileSize = file.size;
+                    if (fileSize > 2 * 1024 * 1024) {
+                        $("#income_proof_error_msg").text('File size exceeds the limit of 2MB. Please upload a smaller file.');
+                        this.value = ""; // Clear the input field after showing error message
+                        return false;
+                    }
+                    // check fileSize ends
+
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var contents = e.target.result;
+                        var blob = new Blob([contents], { type: 'application/pdf' });
+                        var pdfExtensionCheck = 'application/pdf'.toLowerCase() === blob.type.toLowerCase();
+
+                        if (!pdfExtensionCheck) {
+                            $("#income_proof_error_msg").text("Selected file does not appear to be a PDF.");
+                            this.value = ""; // Clear the input field after showing error message
+                            return false;
+                        }
+                    };
+                    reader.readAsArrayBuffer(file);
+                });
+
+                $("#signatureCard").change(function () {
+                    $("#signature_card_error_msg").text('');
+
+                    var file = this.files[0];
+                    var validFormats = /\.(pdf)$/i; // Regular expression to match PDF format
+
+                    if (!validFormats.test(file.name)) {
+                        $("#signature_card_error_msg").text("Please choose a PDF file.");
+                        this.value = ""; // Clear the input field after showing error message
+                        return false;
+                    }
+
+                    // check fileSize starts
+                    var fileSize = file.size;
+                    if (fileSize > 2 * 1024 * 1024) {
+                        $("#signature_card_error_msg").text('File size exceeds the limit of 2MB. Please upload a smaller file.');
+                        this.value = ""; // Clear the input field after showing error message
+                        return false;
+                    }
+                    // check fileSize ends
+
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var contents = e.target.result;
+                        var blob = new Blob([contents], { type: 'application/pdf' });
+                        var pdfExtensionCheck = 'application/pdf'.toLowerCase() === blob.type.toLowerCase();
+
+                        if (!pdfExtensionCheck) {
+                            $("#signature_card_error_msg").text("Selected file does not appear to be a PDF.");
+                            this.value = ""; // Clear the input field after showing error message
+                            return false;
+                        }
+                    };
+                    reader.readAsArrayBuffer(file);
+                });
+
+                $("#w9FromUpload").change(function () {
+                    $("#w9_from_upload_error_msg").text('');
+
+                    var file = this.files[0];
+                    var validFormats = /\.(pdf)$/i; // Regular expression to match PDF format
+
+                    if (!validFormats.test(file.name)) {
+                        $("#w9_from_upload_error_msg").text("Please choose a PDF file.");
+                        this.value = ""; // Clear the input field after showing error message
+                        return false;
+                    }
+
+                    // check fileSize starts
+                    var fileSize = file.size;
+                    if (fileSize > 2 * 1024 * 1024) {
+                        $("#w9_from_upload_error_msg").text('File size exceeds the limit of 2MB. Please upload a smaller file.');
+                        this.value = ""; // Clear the input field after showing error message
+                        return false;
+                    }
+                    // check fileSize ends
+
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var contents = e.target.result;
+                        var blob = new Blob([contents], { type: 'application/pdf' });
+                        var pdfExtensionCheck = 'application/pdf'.toLowerCase() === blob.type.toLowerCase();
+
+                        if (!pdfExtensionCheck) {
+                            $("#w9_from_upload_error_msg").text("Selected file does not appear to be a PDF.");
+                            this.value = ""; // Clear the input field after showing error message
+                            return false;
+                        }
+                    };
+                    reader.readAsArrayBuffer(file);
+                });
+
+                $("#signatureCardForIndivTermDeposit").change(function () {
+                    $("#signature_card_for_indiv_term_deposit_error_msg").text('');
+
+                    var file = this.files[0];
+                    var validFormats = /\.(pdf)$/i; // Regular expression to match PDF format
+
+                    if (!validFormats.test(file.name)) {
+                        $("#signature_card_for_indiv_term_deposit_error_msg").text("Please choose a PDF file.");
+                        this.value = ""; // Clear the input field after showing error message
+                        return false;
+                    }
+
+                    // check fileSize starts
+                    var fileSize = file.size;
+                    if (fileSize > 2 * 1024 * 1024) {
+                        $("#signature_card_for_indiv_term_deposit_error_msg").text('File size exceeds the limit of 2MB. Please upload a smaller file.');
+                        this.value = ""; // Clear the input field after showing error message
+                        return false;
+                    }
+                    // check fileSize ends
+
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var contents = e.target.result;
+                        var blob = new Blob([contents], { type: 'application/pdf' });
+                        var pdfExtensionCheck = 'application/pdf'.toLowerCase() === blob.type.toLowerCase();
+
+                        if (!pdfExtensionCheck) {
+                            $("#signature_card_for_indiv_term_deposit_error_msg").text("Selected file does not appear to be a PDF.");
+                            this.value = ""; // Clear the input field after showing error message
+                            return false;
+                        }
+                    };
+                    reader.readAsArrayBuffer(file);
+                });
+            });
+
+
+            $(document).ready(function () {
+                $('#permanent_address_fields').hide();
+
+                // Handler for Yes checkbox
+                $('#same_address_checkbox').change(function () {
+                    if ($(this).is(':checked')) {
+                        $('#not_same_address_checkbox').prop('checked', false);
+                        $('#permanent_address_fields').hide();
+                        $('#permanent_address').attr('required', false);
+                        $('#permanent_country').attr('required', false);
+                        $('#permanent_state').attr('required', false);
+                        $('#permanent_city').attr('required', false);
+                        $('#permanent_postal_code').attr('required', false);
+                    }
+                });
+
+                // Handler for No checkbox
+                $('#not_same_address_checkbox').change(function () {
+                    if ($(this).is(':checked')) {
+                        $('#same_address_checkbox').prop('checked', false);
+                        $('#permanent_address_fields').show();
+                        $('#permanent_address').attr('required', true);
+                        $('#permanent_country').attr('required', true);
+                        $('#permanent_state').attr('required', true);
+                        $('#permanent_city').attr('required', true);
+                        $('#permanent_postal_code').attr('required', true);
+                    }
+                });
+
+                $('#present_commu_addr_checkbox').change(function () {
+                    if ($(this).is(':checked')) {
+                        $('#permanent_commu_addr_checkbox').prop('checked', false);
+                    }
+                });
+
+                $('#permanent_commu_addr_checkbox').change(function () {
+                    if ($(this).is(':checked')) {
+                        $('#present_commu_addr_checkbox').prop('checked', false);
+                    }
+                });
+
+                $('#term_deposit_principle_interest').change(function () {
+                    if ($(this).is(':checked')) {
+                        $('#term_deposit_principle_only').prop('checked', false);
+                    }
+                });
+
+                $('#term_deposit_principle_only').change(function () {
+                    if ($(this).is(':checked')) {
+                        $('#term_deposit_principle_interest').prop('checked', false);
+                    }
+                });
+
+                generateNomineeFields(1);
+
+                $('#generateNomineeFields').click(function () {
+                    var numNominees = $('#numNominees').val();
+                    generateNomineeFields(numNominees);
+                });
+
+                function generateNomineeFields(numNominees) {
+                    var nomineeFieldsContainer = $('#nomineeFieldsContainer');
+
+                    if (numNominees >= 1) {
+
+                        nomineeFieldsContainer.empty(); // Clear existing fields
+
+                        for (var i = 1; i <= numNominees; i++) {
+                            var nomineeFields = `
+                                <div id="nominee${i}">
+                                    <h3>Nominee ${i}:</h3>
+                                    <div class="row">
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_name${i}">Nominee's Name <span style="color:#ff0000;font-weight:bold"> *</span></label> <br>
+                                            <input type="text" class="form-control" id="nominee_name${i}" name="nominee_name${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_relationship${i}">Relationship <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="text" class="form-control" id="nominee_relationship${i}" name="nominee_relationship${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_percentage${i}">Percentage <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="number" class="form-control" id="nominee_percentage${i}" name="nominee_percentage${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_address${i}">Address <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="text" class="form-control" id="nominee_address${i}" name="nominee_address${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_state${i}">State <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="text" class="form-control" id="nominee_state${i}" name="nominee_state${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_city${i}">City <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="text" class="form-control" id="nominee_city${i}" name="nominee_city${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_postal_code${i}">Postal Code <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="text" class="form-control" id="nominee_postal_code${i}" name="nominee_postal_code${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_country${i}">Country <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="text" class="form-control" id="nominee_country${i}" name="nominee_country${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_photo_id_number${i}">Photo ID Number <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="text" class="form-control" id="nominee_photo_id_number${i}" name="nominee_photo_id_number${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_dob${i}">Nominee DOB <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="date" class="form-control" id="nominee_dob${i}" name="nominee_dob${i}" required>
+                                        </div>
+                                    </div>
+                                    
+
+                                    <!-- Add more fields as needed -->`;
+
+                            if (i > 1) {
+                                nomineeFields += `<button type="button" class="removeNominee btn btn-danger btn-sm" data-nominee="${i}">Remove</button><hr>`;
+                            }
+                            else {
+                                nomineeFields += `<hr>`;
+                            }
+
+                            nomineeFields += `</div>`;
+
+                            nomineeFieldsContainer.append(nomineeFields);
+                        }
+
+                        // Add click event for remove buttons
+                        $('.removeNominee').click(function () {
+                            var nomineeNumber = $(this).data('nominee');
+                            $('#nominee' + nomineeNumber).remove();
+                        });
+                    }
+                    else {
+                        $('#numNominees').val(1);
+                    }
+                }
+
+                // for individual term deposit starts
+                generateNomineeFieldsForIndivTermDeposit(1);
+
+                $('#generateNomineeFieldsForIndivTermDeposit').click(function () {
+                    var numNominees = $('#numNomineesForIndivTermDeposit').val();
+                    generateNomineeFieldsForIndivTermDeposit(numNominees);
+                });
+
+                function generateNomineeFieldsForIndivTermDeposit(numNominees) {
+                    var nomineeFieldsContainer = $('#nomineeFieldsContainerForIndivTermDeposit');
+
+                    if (numNominees >= 1) {
+                        nomineeFieldsContainer.empty(); // Clear existing fields
+
+                        for (var i = 1; i <= numNominees; i++) {
+                            var nomineeFields = `
+                                <div id="nomineeForIndivTermDeposit${i}">
+                                    <h3>Nominee ${i}:</h3>
+                                    <div class="row">
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_nameForIndivTermDeposit${i}">Nominee's Name <span style="color:#ff0000;font-weight:bold"> *</span></label> <br>
+                                            <input type="text" class="form-control" id="nominee_nameForIndivTermDeposit${i}" name="nominee_nameForIndivTermDeposit${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_relationshipForIndivTermDeposit${i}">Relationship <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="text" class="form-control" id="nominee_relationshipForIndivTermDeposit${i}" name="nominee_relationshipForIndivTermDeposit${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_percentageForIndivTermDeposit${i}">Percentage <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="number" class="form-control" id="nominee_percentageForIndivTermDeposit${i}" name="nominee_percentageForIndivTermDeposit${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_addressForIndivTermDeposit${i}">Address <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="text" class="form-control" id="nominee_addressForIndivTermDeposit${i}" name="nominee_addressForIndivTermDeposit${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_stateForIndivTermDeposit${i}">State <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="text" class="form-control" id="nominee_stateForIndivTermDeposit${i}" name="nominee_stateForIndivTermDeposit${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_cityForIndivTermDeposit${i}">City <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="text" class="form-control" id="nominee_cityForIndivTermDeposit${i}" name="nominee_cityForIndivTermDeposit${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_postalCodeForIndivTermDeposit${i}">Postal Code <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="text" class="form-control" id="nominee_postalCodeForIndivTermDeposit${i}" name="nominee_postalCodeForIndivTermDeposit${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_countryForIndivTermDeposit${i}">Country <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="text" class="form-control" id="nominee_countryForIndivTermDeposit${i}" name="nominee_countryForIndivTermDeposit${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_photoIdNumberForIndivTermDeposit${i}">Photo ID Number <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="text" class="form-control" id="nominee_photoIdNumberForIndivTermDeposit${i}" name="nominee_photoIdNumberForIndivTermDeposit${i}" required>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="nominee_dobForIndivTermDeposit${i}">Nominee DOB <span style="color:#ff0000;font-weight:bold"> *</span></label><br>
+                                            <input type="date" class="form-control" id="nominee_dobForIndivTermDeposit${i}" name="nominee_dobForIndivTermDeposit${i}" required>
+                                        </div>
+                                    </div>
+                                    
+
+                                    <!-- Add more fields as needed -->`;
+
+                            if (i > 1) {
+                                nomineeFields += `<button type="button" class="removeNomineeForIndivTermDeposit btn btn-danger btn-sm" data-nominee="${i}">Remove</button><hr>`;
+                            }
+                            else {
+                                nomineeFields += `<hr>`;
+                            }
+
+                            nomineeFields += `</div>`;
+
+                            nomineeFieldsContainer.append(nomineeFields);
+                        }
+
+                        // Add click event for remove buttons
+                        $('.removeNomineeForIndivTermDeposit').click(function () {
+                            var nomineeNumber = $(this).data('nominee');
+                            $('#nomineeForIndivTermDeposit' + nomineeNumber).remove();
+                        });
+                    } else {
+                        $('#numNomineesForIndivTermDeposit').val(1);
+                    }
+                }
+                // for inidividual term deposit ends
+
+                // for showing the w-9 form
+                $('input[name="usresident"]').change(updateDownloadButton);
+                $('input[name="uscitizen"]').change(updateDownloadButton);
+                $('input[name="usgreencard"]').change(updateDownloadButton);
+
+                function updateDownloadButton() {
+                    // Check if any of the "Yes" options is selected for radio groups
+                    var yesSelected = $('#usresidentyes').is(':checked') || $('#uscitizenyes').is(':checked') || $('#usgreencardyes').is(':checked');
+
+                    // Show or hide the download button and link based on the "Yes" option
+                    $('#downloadFileContainer').toggle(yesSelected);
+
+                    if (yesSelected) {
+                        $("#w9FromUpload").attr('required', true);
+                        $("#show-w9-form").show();
+                    }
+                    else {
+                        $("#show-w9-form").hide();
+                        $("#w9FromUpload").attr('required', false);
+                    }
+                }
+
+                // Dummy file URL (replace with your actual file URL)
+                var fileUrl = "https://customerservice.thecitybank.com:7090/assets/sampleFiles/w9-form.pdf";
+
+                // Set the download link href attribute
+                $('#downloadFileLink').attr('href', fileUrl);
+
+                // Set the download button click event to open the link in a new tab
+                $('#downloadFileButton').click(function () {
+                    window.open(fileUrl, '_blank');
+                });
+
+                // $('#termsCheckbox').change(function () {
+                //     $('#submitButton').prop('disabled', !$(this).prop('checked'));
+                // });
+                // $('#termsCheckboxForIndivTermDeposit').change(function () {
+                //     $('#submitButtonForIndivTermDeposit').prop('disabled', !$(this).prop('checked'));
+                // });
+
+
+                $('#term_deposit_amount').on('input', function () {
+                    var amount = $(this).val();
+                    var amountInWords = numberToWords.toWords(amount);
+                    $('#term_deposit_amount_in_word').val(amountInWords);
+                });
+                $('#individual_term_deposit_amount').on('input', function () {
+                    var amount = $(this).val();
+                    var amountInWords = numberToWords.toWords(amount);
+                    $('#individual_term_deposit_amount_in_word').val(amountInWords);
+                });
+            });
+
+
+            // terms and conditions starts 
+            $(document).ready(function () {
+                $('#termsCheckbox').change(function () {
+                    if (this.checked) {
+                        $('#termsModal').modal('show');
+                    } else {
+                        $('#submitButton').prop('disabled', true);
+                    }
+                });
+
+                $('#acceptButton').click(function () {
+                    $('#submitButton').prop('disabled', false);
+                    $(this).data('accepted', true);
+                    $('#termsModal').modal('hide');
+                });
+
+                $('#closeButton').click(function () {
+                    $('#termsModal').modal('hide');
+                });
+
+                $('#termsModal').on('hidden.bs.modal', function (e) {
+                    if (!$('#acceptButton').data('accepted')) {
+                        $('#submitButton').prop('disabled', true);
+                    }
+                });
+            });
+
+            $(document).ready(function () {
+                $('#termsCheckboxForIndivTermDeposit').change(function () {
+                    if (this.checked) {
+                        $('#termsModal').modal('show');
+                    } else {
+                        $('#submitButtonForIndivTermDeposit').prop('disabled', true);
+                    }
+                });
+
+                $('#acceptButton').click(function () {
+                    $('#submitButtonForIndivTermDeposit').prop('disabled', false);
+                    $(this).data('accepted', true);
+                    $('#termsModal').modal('hide');
+                });
+
+                $('#closeButton').click(function () {
+                    $('#termsModal').modal('hide');
+                });
+
+                $('#termsModal').on('hidden.bs.modal', function (e) {
+                    if (!$('#acceptButton').data('accepted')) {
+                        $('#submitButtonForIndivTermDeposit').prop('disabled', true);
+                    }
+                });
+            });
+            // terms and conditions ends
+
+            // validation when submitting the form - starts
+            $(document).ready(function () {
+                $("form").submit(function (event) {
+                    event.preventDefault();
+
+                    var formId = this.id; // Get the ID of the form that was submitted
+                    console.log("Submitted form ID:", formId);
+                    if (formId == 'obu_acc_opening_term_deposit_form') {
+                        // validation starts
+                        if (!$('#individual_term_deposit_principle_interest').is(':checked') && !$('#individual_term_deposit_principle_only').is(':checked')) {
+                            $('#individual_term_deposit_principle_interest').focus(); // Focus on the first checkbox
+                            $('#individual_term_deposit_principle_interest').parent().css('color', 'red'); // Highlight the checkboxes
+                            $('#individual_term_deposit_principle_only').parent().css('color', 'red');
+                            event.preventDefault(); // Prevent form submission
+                        }
+                        else if (!$('#individual_term_deposit_citytouch_enable_yes').is(':checked') && !$('#individual_term_deposit_citytouch_enable_no').is(':checked')) {
+                            $('#individual_term_deposit_citytouch_enable_yes').focus(); // Focus on the first checkbox
+                            $('#individual_term_deposit_citytouch_enable_yes').parent().css('color', 'red'); // Highlight the checkboxes
+                            $('#individual_term_deposit_citytouch_enable_no').parent().css('color', 'red');
+                            event.preventDefault(); // Prevent form submission
+                        }
+                        else {
+                            this.submit();
+                        }
+
+                        // validation ends
+                    }
+                    else if (formId == 'obu_acc_opening_form') {
+                        // validation starts
+                        if (!$('#term_deposit_citytouch_enable_yes').is(':checked') && !$('#term_deposit_citytouch_enable_no').is(':checked')) {
+                            $('#term_deposit_citytouch_enable_yes').focus(); // Focus on the first checkbox
+                            $('#term_deposit_citytouch_enable_yes').parent().css('color', 'red'); // Highlight the checkboxes
+                            $('#term_deposit_citytouch_enable_no').parent().css('color', 'red');
+                            event.preventDefault(); // Prevent form submission
+                        }
+                        else {
+                            this.submit();
+                        }
+                        // validation ends
+                    }
+                    else {
+                        alert('Please select an option before submission');
+                    }
+
+                });
+            });
+            // validation when submitting the form - ends
+
+            $(document).ready(function () {
+                $('input[name="renewal_info"]').click(function () {
+                    var currentCheckbox = $(this);
+                    $('input[name="renewal_info"]').not(currentCheckbox).prop('checked', false);
+                });
+
+                $('input[name="citytouch_enable"]').click(function () {
+                    var currentCheckbox = $(this);
+                    $('input[name="citytouch_enable"]').not(currentCheckbox).prop('checked', false);
+                });
+            });
+
+        </script>
+        <script>
+
+
+        </script>
+
+        <script>
+            $(function () {
+
+                $('#dob').bind(
+                    'dpClosed',
+                    function (e, selectedDates) {
+                        var dob = selectedDates[0];
+                        var month_diff = Date.now() - dob.getTime();
+
+                        //convert the calculated difference in date format
+                        var age_dt = new Date(month_diff);
+
+                        //extract year from date    
+                        var year = age_dt.getUTCFullYear();
+
+                        //now calculate the age of the user
+                        var age = Math.abs(year - 1970);
+                        if (age < 18) {
+                            alert("You have provided year " + age + "! That is under 18");
+                            $('#dob').val("");
+                        } else {
+
+                        }
+
+                    }
+                );
+
+                $('#passissuedate').bind(
+                    'dpClosed',
+                    function (e, selectedDates) {
+                        var issueDate = selectedDates[0];
+                        if (issueDate) {
+                            d = new Date(issueDate);
+                            $('#end-date').dpSetStartDate(d.addDays(0).asString());
+                        }
+                    }
+                );
+
+                $('#passexpirydate').bind(
+                    'dpClosed',
+                    function (e, selectedDates) {
+                        var expiryDate = selectedDates[0];
+                        alert(expiryDate);
+                        var passissue = document.getElementById("passissuedate").value;
+                        const issueDateArray = passissue.split("/");
+                        issueDateFinal = issueDateArray[2] + "-" + issueDateArray[1] + "-" + issueDateArray[0];
+                        issueDateFinal = Date.parse(issueDateFinal);
+                        var passexpirydate = document.getElementById("passexpirydate").value;
+
+                        const expiryDateArray = passexpirydate.split("/");
+                        expiryDateFinal = expiryDateArray[2] + "-" + expiryDateArray[1] + "-" + expiryDateArray[0];
+                        expiryDateFinal = Date.parse(expiryDateFinal);
+
+                        function differenceInMonths(expiryDateFinal, issueDateFinal) {
+                            const monthDiff = expiryDateArray[1] - issueDateArray[1];
+                            const yearDiff = expiryDateArray[2] - issueDateArray[2];
+                            total_mon = monthDiff + yearDiff * 12;
+                            if (total_mon < 60) {
+                                alert("Issue date and Expiry date difference less than 60 months");
+                                $("#passexpirydate").val("");
+                            } else {
+                                //alert("valid");
+                            }
+
+                        }
+
+                        // June 5, 2022
+                        passexpirydate = new Date(passexpirydate);
+
+                        // March 17, 2021
+                        passissue = new Date(passissue);
+
+                        const difference = differenceInMonths(passexpirydate, passissue);
+
+                        console.log(difference); // 15
+
+                    }
+                );
+
+                $('#start-date').bind(
+                    'dpClosed',
+                    function (e, selectedDates) {
+                        var d = selectedDates[0];
+                        if (d) {
+                            d = new Date(d);
+                            $('#end-date').dpSetStartDate(d.addDays(0).asString());
+                        }
+                    }
+                );
+                $('#end-date').bind(
+                    'dpClosed',
+                    function (e, selectedDates) {
+                        var d = selectedDates[0];
+                        if (d) {
+                            d = new Date(d);
+                            $('#start-date').dpSetEndDate(d.addDays(0).asString());
+                        }
+                    }
+                );
+            });
+
+            function passportValidate(professionVal) {
+                var passport = document.getElementById("passport").value;
+                if (passport == "") {
+                    alert("Passport No can't empty");
+                    document.getElementById("profession").value = "1111111111111";
+                }
+
+            }
+            function professionValidate(professionVal) {
+                var profession = document.getElementById("profession").value;
+                if (profession == "") {
+                    alert("Profession No can't empty");
+                    return false;
+                    document.getElementById("profession").value = "";
+                }
+
+            }
+
+
+            function birthDateValidate() {
+                var dob = new Date("01/24/2000");
+                var month_diff = Date.now() - dob.getTime();
+                var age_dt = new Date(month_diff);
+                var year = age_dt.getUTCFullYear();
+                var age = Math.abs(year - 1970);
+                document.write("Age of the date entered: " + age + " years");
+            }
+
+        </script>
+
+    </body>
+
+</html>

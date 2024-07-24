@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 15%;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar a{
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: 700;
+            background-color: #0454a983;
+            margin-bottom: 20px ;
+        }
+        .navbar{
+            display: flex;
+            background-color: #0454a9;
+            color: white;
+            justify-content: center;
+            padding: 3px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .main {
+            width: 60%;
+            padding: 10px;
+        }
+        .sidebar h2 {
+            margin-top: 10px;
+            color: #0454a9;
+            text-align: center;
+            display: block;
+            background-color: #ddd;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .category li{
+            list-style-type:none;
+            display: block;
+            text-align: center;
+            padding: 5px;
+            color: black;
+        }
+        ul{
+            padding-inline-start: 0px;
+            
+        }
+        .cart h2, .customer-info h2 {
+            margin-top: 0;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: calc(50% - 10px);
+            cursor: pointer;
+        }
+        .cart {
+            width: 20%;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-left: 1px solid #ddd;
+        }
+        .cart-items {
+            list-style-type: none;
+            padding: 0;
+        }
+        .cart-items li {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .total {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .customer-info {
+            margin-top: 20px;
+        }
+        .payment {
+            margin-top: 20px;
+        }
+        .payment button {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.2em;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="{% url 'home' %}">HOME</a>
+            <h2>Categories</h2>
+            <ul class="category">
+                {% for item in category %}
+                <li>{{item.category_name}}</li>
+               {% endfor %}
+                <!-- Add more categories as needed -->
+            </ul>
+        </div>
+        <div class="main">
+            <div class="navbar">
+                <h2>Products</h2>
+            </div>
+           <div class="search-bar">
+                <input type="text" id="search-product" placeholder="Search for a product...">
+            </div>
+
+
+            <div class="products">
+                <div class="product">
+                    <p>Product 1</p>
+                    <p>$10.00</p>
+                </div>
+                <div class="product">
+                    <p>Product 2</p>
+                    <p>$15.00</p>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+        <div class="cart">
+            <h2>Cart</h2>
+            <ul class="cart-items">
+                <li>
+                    <p>Product 1</p>
+                    <p>$10.00</p>
+                </li>
+                <!-- Cart items will be added here dynamically -->
+            </ul>
+            <div class="total">
+                Total: $10.00
+            </div>
+            <div class="customer-info">
+                <h2>Customer Info</h2>
+                <form>
+                    <label for="customer-name">Name:</label>
+                    <input type="text" id="customer-name" name="customer-name" required>
+                    <label for="customer-email">Email:</label>
+                    <input type="email" id="customer-email" name="customer-email" required>
+                </form>
+            </div>
+            <div class="payment">
+                <button>Proceed to Payment</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
